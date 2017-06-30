@@ -7,14 +7,6 @@ use App\Post;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
@@ -25,5 +17,13 @@ class HomeController extends Controller
             'posts' => Post::orderBy('created_at', 'desc')->limit(5)->get(),
             'latest' => true,
         ]);
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function welcome()
+    {
+        return view('welcome');
     }
 }
