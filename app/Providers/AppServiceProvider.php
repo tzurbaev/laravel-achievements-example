@@ -2,7 +2,11 @@
 
 namespace App\Providers;
 
+use App\Criterias\CreateComment;
+use App\Criterias\CreatePost;
+use App\Criterias\UserSignup;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Achievements\Facades\Achievements;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Achievements::registerCriterias([
+            UserSignup::class, CreateComment::class, CreatePost::class,
+        ]);
     }
 
     /**

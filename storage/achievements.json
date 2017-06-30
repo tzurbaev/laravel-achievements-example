@@ -1,0 +1,69 @@
+{
+  "achievements": [
+    {
+      "id": 1,
+      "name": "Sign Up!",
+      "description": "Create an Account.",
+      "points": 10,
+      "criterias": [
+        {
+          "type": "user.signup",
+          "name": "Create an Account",
+          "max_value": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Write post.",
+      "description": "Write your first blog post.",
+      "points": 10,
+      "criterias": [
+        {
+          "type": "post.create",
+          "name": "Write first blog post",
+          "max_value": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Write 5 posts.",
+      "description": "Write 5 blog post.",
+      "points": 10,
+      "criterias": [
+        {
+          "type": "post.create",
+          "name": "Write 5 blog posts",
+          "max_value": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Comment post.",
+      "description": "Leave your first comment on a blog post.",
+      "points": 5,
+      "criterias": [
+        {
+          "type": "comment.create",
+          "name": "Write 1 comment",
+          "max_value": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Comment 5 posts.",
+      "description": "Leave at least 5 comments on any blog posts.",
+      "points": 5,
+      "criterias": [
+        {
+          "type": "comment.create",
+          "name": "Write 5 comments",
+          "max_value": 5
+        }
+      ]
+    }
+  ]
+}
