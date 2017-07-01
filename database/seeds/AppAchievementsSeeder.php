@@ -46,7 +46,10 @@ class AppAchievementsSeeder extends Seeder
 
         foreach ($data['criterias'] as $criteria) {
             DB::table('achievement_criterias')->insert(
-                array_merge($criteria, ['achievement_id' => $data['id']])
+                array_merge($criteria, [
+                    'achievement_id' => $data['id'],
+                    'requirements' => isset($criteria['requirements']) ? json_encode($criteria['requirements']) : '',
+                ])
             );
         }
     }

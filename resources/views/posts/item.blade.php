@@ -1,8 +1,10 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h2>
+        @if (isset($single) && $single)
+            <h2 style="margin:0">{{ $post->title }}</h2>
+        @else
             <a href="{{ url('/posts/'.$post->id) }}">{{ $post->title }}</a>
-        </h2>
+        @endif
     </div>
     <div class="panel-body">
         {!! nl2br($post->body) !!}

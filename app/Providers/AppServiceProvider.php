@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Criterias\CreateComment;
 use App\Criterias\CreatePost;
+use App\Criterias\ReadPost;
+use App\Criterias\UserLogin;
 use App\Criterias\UserSignup;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -19,7 +21,8 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         Achievements::registerCriterias([
-            UserSignup::class, CreateComment::class, CreatePost::class,
+            UserSignup::class, CreateComment::class,
+            CreatePost::class, ReadPost::class, UserLogin::class,
         ]);
     }
 

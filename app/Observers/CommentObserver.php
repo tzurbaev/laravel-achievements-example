@@ -12,6 +12,9 @@ class CommentObserver
      */
     public function created(Comment $comment)
     {
-        Achievements::criteriaUpdated($comment->user, 'comment.create', ['comment' => $comment]);
+        Achievements::criteriaUpdated($comment->user, 'comment.create', [
+            'comment' => $comment,
+            'post' => $comment->post,
+        ]);
     }
 }

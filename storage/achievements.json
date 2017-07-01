@@ -64,6 +64,62 @@
           "max_value": 5
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "Read 5 popular posts",
+      "description": "Read 5 posts that received at least 3 comments.",
+      "points": 10,
+      "criterias": [
+        {
+          "type": "post.read",
+          "name": "Read 5 popular posts",
+          "max_value": 5,
+          "requirements": {
+            "min_comments": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Read 5 popular posts and comment all ",
+      "description": "Read 5 posts that received at least 3 comments and leave a comment on each post.",
+      "points": 15,
+      "criterias": [
+        {
+          "type": "post.read",
+          "name": "Read 5 popular posts",
+          "max_value": 5,
+          "requirements": {
+            "min_comments": 3
+          }
+        },
+        {
+          "type": "comment.create",
+          "name": "Comment 5 popular posts",
+          "max_value": 5,
+          "requirements": {
+            "post_min_comments": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Visit our site for 7 days",
+      "description": "Visit our site for 7 days in a row.",
+      "points": 40,
+      "criterias": [
+        {
+          "type": "user.login",
+          "name": "Log in 7 days in a row",
+          "max_value": 7,
+          "requirements": {
+            "daily": true
+          }
+        }
+      ]
     }
   ]
 }

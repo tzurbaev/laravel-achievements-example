@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                @include('posts.item', ['post' => $post])
+                @include('posts.item', ['post' => $post, 'single' => true])
                 <div class="comments-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-heading">

@@ -2,18 +2,24 @@
 
 namespace App\Criterias;
 
-use Illuminate\Support\Facades\Log;
 use Zurbaev\Achievements\Achievement;
 use Zurbaev\Achievements\AchievementCriteria;
 use Zurbaev\Achievements\AchievementCriteriaChange;
 
-class CreateComment
+class ReadPost
 {
     public function type()
     {
-        return 'comment.create';
+        return 'post.read';
     }
 
+    /**
+     * @param $owner
+     * @param AchievementCriteria $criteria
+     * @param Achievement $achievement
+     * @param array $data
+     * @return AchievementCriteriaChange|null
+     */
     public function handle($owner, AchievementCriteria $criteria, Achievement $achievement, array $data)
     {
         /**
@@ -25,12 +31,7 @@ class CreateComment
             return null;
         }
 
-        if ($criteria->hasRequirement('post_min_comments') && $post->comments()->count() < $criteria->requirement('post_min_comments')) {
-            Log::debug('[CreateComment@handle] Criteria has a `post_min_comments` requirement, but post does not have such comments.', [
-                'required' => $criteria->requirement('post_min_comments'),
-                'actual' => $post->comments()->count(),
-            ]);
-
+        if ($criteria->hasRequirement('min_comments') && $post->comments()->count() < $criteria->requirement('min_comments')) {
             return null;
         }
 

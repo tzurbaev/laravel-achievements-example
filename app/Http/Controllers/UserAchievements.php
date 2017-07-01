@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Laravel\Achievements\AchievementModel;
 
 class UserAchievements extends Controller
 {
@@ -13,9 +14,16 @@ class UserAchievements extends Controller
      */
     public function index(Request $request)
     {
-        $achievements = $request->user()->achievements()->orderBy('achievementables.completed_at', 'desc')->get();
+        /**
+         * @var \Illuminate\Database\Eloquent\Collection $userAchievements
+         */
         $points = $request->user()->achievementPoints();
+        $userAchievements = $request->user()->achievements()->orderBy('achievementables.completed_at', 'desc')->get()->keyBy('id');
+        $achievements = AchievementModel::all()
+            ->reject(function (AchievementModel $achievement) use ($userAchievements) {
+                return $userAchievements->has($achievement->id);
+            });
 
-        return view('user-achievements', compact('achievements', 'points'));
+        return view('user-achievements', compact('achievements', 'userAchievements', 'points'));
     }
 }

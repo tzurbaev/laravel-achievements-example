@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Laravel\Achievements\Facades\Achievements;
 
 class PostsController extends Controller
 {
@@ -63,13 +64,20 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param \Illuminate\Http\Request $request
      * @param int $id
      *
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $post = Post::findOrFail($id);
+
+        if ($request->user()) {
+            Achievements::criteriaUpdated($request->user(), 'post.read', [
+                'post' => $post,
+            ]);
+        }
 
         return view('posts.show', ['post' => $post]);
     }
