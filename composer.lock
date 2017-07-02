@@ -237,16 +237,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.27",
+            "version": "v5.4.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "66f5e1b37cbd66e730ea18850ded6dc0ad570404"
+                "reference": "442511fc62121085d184355e4f964c88942bbecb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/66f5e1b37cbd66e730ea18850ded6dc0ad570404",
-                "reference": "66f5e1b37cbd66e730ea18850ded6dc0ad570404",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/442511fc62121085d184355e4f964c88942bbecb",
+                "reference": "442511fc62121085d184355e4f964c88942bbecb",
                 "shasum": ""
             },
             "require": {
@@ -362,7 +362,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-06-15T19:08:25+00:00"
+            "time": "2017-06-30T13:43:07+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1837,16 +1837,16 @@
         },
         {
             "name": "tzurbaev/achievements",
-            "version": "0.9.3",
+            "version": "0.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tzurbaev/achievements.git",
-                "reference": "6fb0e0229129b62000696a0eee261b1fc24af4f6"
+                "reference": "4a52e80dd8d6e1bc725e73abf5fbdc74fb8ce06b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tzurbaev/achievements/zipball/6fb0e0229129b62000696a0eee261b1fc24af4f6",
-                "reference": "6fb0e0229129b62000696a0eee261b1fc24af4f6",
+                "url": "https://api.github.com/repos/tzurbaev/achievements/zipball/4a52e80dd8d6e1bc725e73abf5fbdc74fb8ce06b",
+                "reference": "4a52e80dd8d6e1bc725e73abf5fbdc74fb8ce06b",
                 "shasum": ""
             },
             "require": {
@@ -1873,26 +1873,26 @@
                 }
             ],
             "description": "Achievements System",
-            "time": "2017-07-01T18:14:54+00:00"
+            "time": "2017-07-02T13:15:32+00:00"
         },
         {
             "name": "tzurbaev/laravel-achievements",
-            "version": "0.9.3",
+            "version": "0.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tzurbaev/laravel-achievements.git",
-                "reference": "22a3b5a32b05fd2c8d900a307940b3bd2586d138"
+                "reference": "8e289947d4f5b3d1d0fe6ea08d25539676e51f05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tzurbaev/laravel-achievements/zipball/22a3b5a32b05fd2c8d900a307940b3bd2586d138",
-                "reference": "22a3b5a32b05fd2c8d900a307940b3bd2586d138",
+                "url": "https://api.github.com/repos/tzurbaev/laravel-achievements/zipball/8e289947d4f5b3d1d0fe6ea08d25539676e51f05",
+                "reference": "8e289947d4f5b3d1d0fe6ea08d25539676e51f05",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "5.4.*",
                 "php": ">=7.0",
-                "tzurbaev/achievements": "^0.9.0"
+                "tzurbaev/achievements": "^0.9.4"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9.9",
@@ -1916,7 +1916,7 @@
                 }
             ],
             "description": "Achievements System for Laravel framework",
-            "time": "2017-07-01T18:25:09+00:00"
+            "time": "2017-07-02T13:19:51+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
